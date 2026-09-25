@@ -1,0 +1,9 @@
+#Ghostty is available in Fedora COPR.
+
+dnf copr enable scottames/ghostty
+dnf install ghostty
+
+#Ghostty is also available in Terra.
+
+dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
+dnf install ghostty

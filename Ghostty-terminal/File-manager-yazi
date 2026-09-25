@@ -1,0 +1,13 @@
+#To install Yazi on Fedora, run two commands in the terminal:
+
+   Step 1:
+
+#Enable the special COPR repository lihaohong/yazi.
+
+sudo dnf copr enable lihaohong/yazi
+
+   Step 2:
+
+#Start the installation of the file manager.
+
+sudo dnf install yazi

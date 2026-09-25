@@ -1,0 +1,93 @@
+   Step 1
+
+###Download and install Starship
+
+  curl -sS https://starship.rs/install.sh | sh
+
+#   Step 2
+
+###Open the config file
+
+  mkdir -p ~/.config
+  nano ~/.config/starship.toml
+
+#   Step 3
+
+###And paste the following configuration
+
+# lines format
+format = """
+[╭─](bold #89b4fa) $os$username$hostname$directory$git_branch$git_status$python$nodejs$c$rust
+[╰─](bold #89b4fa)$character"""
+
+add_newline = true
+
+# flash
+[character]
+success_symbol = "[❯](bold #a6e3a1)" # Пастельно-зеленая при успехе
+error_symbol = "[❯](bold #f38ba8)"   # Пастельно-красная при ошибке
+
+# Fedora icon
+[os]
+disabled = false
+style = "bold #89b4fa"
+format = "[$symbol]($style)"
+symbols = { Fedora = " ", Linux = " ", Macos = " " }
+
+# yellow username
+[username]
+show_always = true
+style_user = "bold #f9e2af"
+format = "[$user]($style)"
+
+# Separate @ and hostname (a bit purple)
+[hostname]
+ssh_only = false
+style = "bold #a6adc8"
+format = "[@]($style)[$hostname](bold #cba6f7) "
+
+# Current directory with icon
+[directory]
+style = "bold #89dceb"
+truncation_length = 3
+truncation_symbol = "…/"
+read_only = " 󰌾"
+format = "[󰉋 $path]($style) "
+
+# Git branch and status
+[git_branch]
+symbol = " "
+style = "bold #f5c2e7"
+format = "[$symbol$branch]($style) "
+
+# Git status (changes, commits)
+[git_status]
+style = "bold #f38ba8"
+format = "([$all_status$ahead_behind]($style) )"
+
+# Language icons (if there is code in the folder)
+[python]
+symbol = " "
+style = "bold #f9e2af"
+format = "[$symbol$version]($style) "
+
+[nodejs]
+symbol = "󰎙 "
+style = "bold #a6e3a1"
+format = "[$symbol$version]($style) "
+
+
+
+#   Step 4
+
+
+### Add Starship to autoload
+
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+
+#   Step 5
+
+
+### Changes applied
+
+source ~/.bashrc

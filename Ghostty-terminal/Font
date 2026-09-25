@@ -1,0 +1,22 @@
+#Downoload and install to system Nerdfont
+
+#my favorite font - AnnotationM Nerd Font
+
+ #Downoload
+
+ wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/AnnotationMono.zip"
+
+ #And put ttf files in the fonts directory
+
+ mkdir -p ~/.local/share/fonts/
+
+
+##Downoload and install to system Nerdfont ICONS
+
+#Downoload
+
+ wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/NerdFontsSymbolsOnly.zip"
+
+ #And put ttf files in the fonts directory
+
+ mkdir -p ~/.local/share/fonts/

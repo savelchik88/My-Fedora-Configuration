@@ -1,0 +1,15 @@
+#Go to
+
+ nano ~/.config/ghostty/config
+
+#And paste it
+
+ #Offcicial theme
+ theme = Monokai Pro Octagon
+
+ #Font
+ font-family = AnnotationM Nerd Font
+
+ #Background blur
+ background-opacity = 0.92
+ background-blur-radius = 25
